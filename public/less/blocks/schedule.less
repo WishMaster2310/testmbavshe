@@ -1,0 +1,318 @@
+.schedule-wrapper {
+	width: 1110px;
+	margin: auto;
+	margin-top: 60px;
+	margin: auto;
+	@media (max-width: @mobile-widht) {
+	    width: auto;
+    }
+
+	& .ticket-message {
+		font-size: 22px;
+		color: white;
+		font-family: @font-semilight;
+		line-height: 61px;
+		padding-left: 36px;
+		background-color: #0b8806;
+	    margin-bottom: 2px;
+	    position: relative;
+
+	    & img {
+	    	position: absolute;
+	    	top: 15px;
+	    	left: 25px;
+	    }
+	}
+}
+.daysheading {
+	position: relative;
+}
+.daychanger {
+	position: absolute;
+	right: 0;
+	top: 10px;
+	@media (max-width: @mobile-widht) {
+	    position: relative;
+	    margin-bottom: 30px;
+    }
+
+	& > div {
+		display: inline-block;
+		padding-left: 22px;
+		padding-right: 22px;
+		margin-left: 20px;
+		cursor: pointer;
+		font-size: 18px;
+		color: #a1a1a4;
+		line-height: 35px;
+		border: 2px dashed #a1a1a4;
+		@media (max-width: @mobile-widht) {
+			margin-left: 0;
+		    margin-bottom: 10px;
+		    display: block;
+		    text-align: center;
+	    }
+
+		&.active {
+			background-color: #0b8806;
+			color: white;
+			border: 2px solid #0b8806;
+		}
+
+		& img {
+			margin-right: 7px;
+		}
+	}
+}
+
+.stars-agenda {
+	width: 100%;
+	margin-top: 50px;
+
+	& p {
+		padding-left: 45px;
+		margin-bottom: 30px;
+		position: relative;
+		& > img {
+			position: absolute;
+			left: 8px;
+			top: 3px;
+			&.second {
+				left: 24px;
+			}
+		}
+
+	}
+}
+
+.schedule {
+	width: 100%;
+	border-spacing: 2px;
+    border-collapse: separate;
+
+    &-widthsetter {
+    	width: 177px;
+    }
+
+	&-time {
+		width: 125px;
+		font-size: 16px;
+		color: #cecdce;
+		font-family: @font-light;
+		&.odd {
+			font-size: 22px;
+			color: #231f20;
+			font-family: @font-semilight;
+		}
+	}
+
+	& td {
+		text-align: center;
+	    vertical-align: middle;
+	}
+
+	& tr {
+		height: 43px;
+	}
+
+	& tr {
+		height: 43px;
+
+		&.odd {
+			background-color: #f7f7f8;
+		}
+	}
+
+	&-heading {
+		color: #0b8806;
+		font-size: 18px;
+
+		&__transport {
+			border-left: 1px dashed #0b8806;
+			border-right: 1px dashed #0b8806;
+			width: 187px;
+
+		}
+
+		& img {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+	}
+
+	tr&-sep {
+		height: 2px;
+	}
+
+	&-plate {
+		border: 1px solid #0b8806;
+		background-color: white;
+
+	 	&.transport {
+	 		width: 187px;
+	 	}
+
+	 	&.arrival {
+	 		& img {
+	 			margin-top: 0px; 
+	 		}
+	 		& .schedule-plate__name {
+	 			line-height: 19px;
+ 			    margin-top: -5px;
+	 		}
+	 	}
+
+	 	& img {
+	 		margin-top: 8px;
+	 		margin-bottom: 0;
+	 	}
+
+		&__wrap {
+			display: inline-block;
+		    padding-left: 50px;
+		    text-align: left;
+		   	width: 280px;
+		    position: relative;
+
+		    & img {
+		    	position: absolute;
+		    	position: absolute;
+		    	left: 0;
+		    	top: 0px;
+		    	margin: 0;
+
+		    	&.azure {
+	    		  top: 0px;
+	    		  left: -16px;
+		    	}
+
+		    	&.obed {
+		    		top: 0px;
+		    	}
+
+		    	&.eve {
+		    		top: 16px;
+		    	}
+
+		    	&.si-zaryjadka {
+		    		top:0
+		    	}
+
+		    	&.keynote {
+	    		    left: 0;
+		    	}
+
+		    	&.si-keynote-lg {
+		    		left: -6px;
+    				top: -3px;
+		    	}
+
+		    	&.si-office-lg {
+    				top: -3px;
+		    	}
+
+		    	&.office {
+	    		    left: 0;
+		    	}
+
+		    	&.coffee {
+	    		    top: 6px;
+    		      left: 111px;
+		    	}
+
+		    	&.mic {
+	    		    left: 0
+		    	}
+
+		    	&.closing-mic {
+	    		    top: -2px;
+	    		    left: 87px;
+	    		    height: 45px;
+		    	}
+		    }
+
+		    &.small {
+			    width: 250px;
+		    }
+
+		    &.oneline {
+		    	height: 35px;
+
+		    	& .schedule-plate__time {
+		    		position: absolute;
+		    		left: 200px;
+    				top: 12px;
+		    	}
+
+
+		    	& .schedule-plate__name {
+		    		position: absolute;
+		    		top: 7px;
+	    		  left: 95px;
+		    	}
+
+		    	& img {
+		    		 	top: -1px;
+    					left: 51px;
+    				
+			    	&.closing-mic {
+		    		    top: -2px;
+		    		    left: 45px;
+		    		    height: 45px;
+			    	}
+		    	}
+		    }
+
+		    &.closing {
+		    	width: 433px;
+	    	    padding-left: 37px;
+		    }
+		}
+
+		&__time {
+			display: block;
+			font-size: 14px;
+			font-family: @font-semilight;
+			color: #a1a1a4;
+			.green & {
+				color: white;
+			}
+		}
+		&__addition {
+			display: block;
+			font-size: 14px;
+			font-family: @font-normal;
+			color: #a1a1a4;
+			.green & {
+				color: white;
+			}
+		}
+
+		&__name {
+			display: block;
+			font-size: 17px;
+			line-height: 24px;
+			color: #696a6d;
+			font-family: @font-semilight;
+			.green & {
+				color: white;
+			}
+			& img {
+				display: inline-block;
+				top: initial;
+				right: initial;
+				left: initial;
+				bottom: initial;
+				&.star {
+					margin-bottom: 5px;
+				}
+			}
+		}
+
+		&.green {
+			background-color: #25b020;
+		    color: white;
+		}
+	}
+}

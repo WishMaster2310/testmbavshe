@@ -1,0 +1,71 @@
+.PropertyLoop(margin-top, 0, 5, 50, mt);
+.PropertyLoop(margin-top, -50, 5, 0, mt);
+.PropertyLoop(margin-bottom, 0, 5, 80, mb);
+.PropertyLoop(margin-bottom, -50, 5, 0, mb);
+
+.color {
+	&-white {
+		color: #fff;
+	}
+	&-green {
+		color: @green !important;
+	}
+
+	&-gray {
+		color: #696a6d
+	}
+}
+
+.text {
+	font-size: 1.125em;
+	letter-spacing: .02em;
+	&-center {
+		text-align: center;
+	}
+
+	&-prior {
+		font-size: 22px;
+	}
+
+	&-secondary {
+		font-size: 18px;
+	}
+
+	&-negativels {
+		letter-spacing: -.025em;
+	}
+
+	&-blue {
+		color: #1291aa;
+	}
+
+
+	&-dark-blue {
+		color: #044c8c;
+	}
+
+	&-green {
+		color: @green;
+	}
+
+	&-white {
+		color: #fff;
+	}
+}
+
+.clearfix {
+	.clearfix()
+}
+
+.link-color2 {
+	color: @green;
+
+	&:hover {
+		color: darken(@green, 10%);
+	}
+}
+
+
+.fz22 {
+	font-size: 22px;
+}

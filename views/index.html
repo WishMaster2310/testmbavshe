@@ -1,0 +1,22 @@
+{% if isExport %}
+	{% extends "./layouts/prod.html" %}
+		{% else %}
+	{% extends "./layouts/main.html" %}
+{% endif %}
+{% block content %}
+	{% include "./blocks/top-section.html" %}
+	{% include "./blocks/about.html" %}
+	{% include "./blocks/formats.html" %}
+	{#% include "./blocks/compare.html" %}
+	{% include "./blocks/conditions.html" %}
+	{% include "./blocks/shedule.html" %}
+	{% include "./blocks/connect.html" %}
+	{% include "./blocks/contacts.html" %#}
+
+
+
+{% endblock %}
+
+{% block pageScripts %}
+ 	<script src="../javascripts/rAF.js"></script>
+{% endblock %}

@@ -1,0 +1,46 @@
+.arcticmodal-overlay,
+.arcticmodal-container { position: fixed; left: 0; top: 0; right: 0; bottom: 0; z-index: 1000; }
+.arcticmodal-container { overflow: auto; margin: 0; padding: 0; border: 0; border-collapse: collapse; }
+*:first-child+html .arcticmodal-container { height: 100% }
+.arcticmodal-container_i { height: 100%; margin: 0 auto; }
+.arcticmodal-container_i2 { padding: 24px; margin: 0; border: 0; vertical-align: middle; }
+.arcticmodal-error { padding: 20px; border-radius: 10px; background: #000; color: #fff; }
+.arcticmodal-loading { width: 80px; height: 80px; border-radius: 10px; background: #000; }
+
+
+
+.modal{
+	position: relative;
+	//max-width: 1170px;
+	max-width: 960px;
+	
+	.h2 {
+		color: #000;
+	}
+
+
+	&-header {
+		//background: #fff;
+		height :80px;
+		background: transparent url(../images/modal-back.png) no-repeat right bottom;
+		position: relative;
+	}
+
+	&-content {
+		background-color: #fff;
+		padding: 0px 8.5% 50px 8.5%;
+	}
+
+	&-close {
+		position: absolute;
+		top: 0;
+		right: -2px;
+	}
+
+	.btn-ghostblue {
+		min-width: 240px;
+		text-align: center;
+		
+	}
+
+}

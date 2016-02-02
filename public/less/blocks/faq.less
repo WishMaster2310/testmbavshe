@@ -1,0 +1,94 @@
+.faq {
+	background-color: #f7f7f8;
+	padding: 40px 100px 30px 50px;
+	margin-bottom: 30px;
+	position: relative;
+
+	&-container {
+		margin-left: -50px;
+		margin-right: -50px;
+	}
+
+	&__title {
+		font-size: 1.375em;
+		line-height: 1.272;
+		color: @green;
+		margin-bottom: .85em;
+	}
+
+	&__content {
+		font-size: 1.125em;
+		ul {
+			list-style-type: none;
+
+			> li {
+				padding-left: 1.25em;
+				margin-bottom: .5em;
+
+				&:before {
+					content: "\2022";
+					margin-left: -1.25em;
+					margin-right: .8em;
+				}
+			}
+		}
+
+		p {
+			margin: .5em 0;
+		}
+	}
+
+	&__reverse {
+		position: absolute;
+		top: 50px;
+		right: 50px;
+	}
+
+	&-controls {
+		margin-bottom: 10px;
+
+
+		a {
+			margin-right: 20px;
+   	 	margin-bottom: 20px;
+		}
+	}
+
+	&-headlines {
+		list-style-type: none;
+		margin: 0 0 40px 0;
+
+		&__item {
+			margin-bottom: .5em;
+			padding-left: 1.25em;
+			
+
+			&:before {
+				content: "\2022";
+				margin-left: -1.25em;
+				margin-right: .8em;
+				color: @green; 
+			}
+		}
+
+		&__link {
+			text-decoration: none;
+			border-color: @green;
+			border-bottom: 1px dashed fade(@green, 50%);
+
+			&:hover {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+
+	&-wrap {
+		display: none;
+
+		&--active {
+			//display: block;
+		}
+	}
+
+
+}

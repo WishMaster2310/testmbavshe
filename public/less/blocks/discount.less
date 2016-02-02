@@ -1,0 +1,55 @@
+.discouts {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	&-item {
+		display: block;
+		.clearfix();
+		margin-bottom: 30px;
+
+		a {
+			color: @green;
+			text-decoration: none;
+
+			&:hover {
+				color: darken(@green, 10%)
+			}
+		}
+
+		&__icon {
+			position: relative;
+			float: left;
+			width: 79px;
+			height: 79px;
+
+			ins{
+				display: inline-block;
+				vertical-align: top;
+				position: absolute;
+				top: 50%;
+				font: normal 36px/1 @font-semilight;
+				text-decoration: none;
+				height: 36px;
+				width: 100%;
+				text-align: center;
+				color: #24a9c3;
+				margin-top: -18px;
+				left :0;
+			}
+
+		}
+
+		&__data {
+			//margin-left: 95px;
+
+			&-title {
+				font-size: 1.375em;
+				margin-top: 8px;
+				font-family: @font-normal;
+				margin-bottom: 8px;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,57 @@
+.speakers-wrapper {
+    width: 1110px;
+    margin: auto;
+    @media (max-width: @mobile-widht) {
+    	width: auto;
+    }
+}
+
+.speaker {
+	background-color: #f7f7f8;
+    padding-left: 315px;
+    padding-top: 40px;
+    padding-right: 90px;
+    padding-bottom: 40px;
+    min-height: 290px;
+    position: relative;
+    margin-bottom: 17px;
+    @media (max-width: @mobile-widht) {
+        padding-left: 89px;
+        padding-right: 10px;
+    }
+
+    &-label {
+    	color: #0b8806;
+    	font-size: 22px;
+    	margin-bottom: 7px;
+    }
+
+    &-position {
+    	color: #a1a1a4;
+    	font-size: 16px;
+    	margin-bottom: 20px;
+    }
+
+    &-info {
+    	color: #231f20;
+    	font-size: 16px;
+    	line-height: 22px;
+        @media (max-width: @mobile-widht) {
+            margin-left: -73px;
+        }
+    }
+
+    &-photo {
+    	width: 212px;
+    	height: 212px;
+    	position: absolute;
+    	left: 70px;
+    	top: 40px;
+        @media (max-width: @mobile-widht) {
+            width: 53px;
+            height: 53px;
+            left: 15px;
+            top: 45px;
+        }
+    }
+}
