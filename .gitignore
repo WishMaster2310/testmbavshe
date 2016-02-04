@@ -3,4 +3,4 @@
 __design/*
 node_modules/*
 .idea/
-export/
+export/*
