@@ -10,7 +10,7 @@ var replace = require('gulp-replace');
 var spritesmith = require('gulp.spritesmith');
 var merge = require('merge-stream');
 var sourcemaps = require('gulp-sourcemaps');
-var siteDB = require('./datasource/sdata.json');
+var siteDB = require('./datasource/base.json');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix');
 var LessPluginCleanCSS = require('less-plugin-clean-css');
 
@@ -54,8 +54,8 @@ gulp.task('less:prod', function() {
 gulp.task('sprites', function() {
 
   var spriteData = gulp.src('public/__icons/*.png').pipe(spritesmith({
-    imgName: 'sprite-main.png',
-    cssName: 'sprite-main.less',
+    imgName: 'global_sprite.png',
+    cssName: 'global.sprite.less',
     padding: 10,
     cssTemplate: 'sprite_templates/main-sprite.css.hbs'
   }));
@@ -63,7 +63,7 @@ gulp.task('sprites', function() {
   var imgStream = spriteData.img
     .pipe(gulp.dest('public/images/'));
   var cssStream = spriteData.css
-    .pipe(gulp.dest('public/less/sprites/'));
+    .pipe(gulp.dest('public/less/src/'));
 
   return merge(imgStream, cssStream);
 });
@@ -72,7 +72,7 @@ gulp.task('default', function() {
  
   server.run(['bin/www'], [], [true]);
 
-  gulp.watch(['views/**/*.html', 'views/*.html', './datasource/sdata.json', './app.js', 'routes/**/*.js'], function(event) {
+  gulp.watch(['views/**/*.html', 'views/*.html', './datasource/base.json', './app.js', 'routes/**/*.js'], function(event) {
     server.notify(event);
     console.log(path.basename(event.path), 'was', event.type);
     server.stop();

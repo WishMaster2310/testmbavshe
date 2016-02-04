@@ -1,0 +1,7 @@
+{% extends 'layouts/main.html' %}
+{% block content %}
+	<h1>!!! ОШИБКА {{ error.status }} {{ error.message }} !!!</h1>
+	<pre>
+		{{ error }}
+	</pre>
+{% endblock %}	

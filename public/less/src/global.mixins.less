@@ -1,0 +1,16 @@
+//use .getMicrosoftFont('normal', 400, 'normal')
+//use .getMicrosoftFont('semilight', 300, 'normal')
+//use .getMicrosoftFont('italic', 400, 'italic')
+.getMicrosoftFont(@msdir: normal, @weight: 400, @style: normal, @path: 'https://c.s-microsoft.com/static/fonts/segoe-ui/cyrillic'){
+    @font-face{
+        font-family: 'wf_segoe-ui';
+        src:url('@{path}/@{msdir}/latest.eot');
+        src:url('@{path}/@{msdir}/latest.eot?#iefix') format('embedded-opentype'),
+            url('@{path}/@{msdir}/latest.woff') format('woff'),
+            url('@{path}/@{msdir}/latest.ttf') format('truetype'),
+            url('@{path}/@{msdir}/latest.svg#icon') format('svg');
+        font-weight: @weight;
+        font-style: @style;
+    }
+}
+

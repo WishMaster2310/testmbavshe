@@ -1,37 +1,15 @@
 
-@import 'variables.less';
-@import 'mixin.less';
-
-@import 'sprites/sprite-main.less';
-
-@import 'layout/reset.less';
-@import 'layout/fonts.less';
-@import 'layout/layout.less';
-
-@import 'components/slick.less';
+@import 'src/global.reset.less';
+@import 'src/global.variables.less';
+@import 'src/global.mixins.less';
+@import 'src/global.layout.less';
+@import 'src/global.sprite.less';
 
 
-@import 'blocks/header.less';
-@import 'blocks/footer.less';
-@import 'blocks/top-section.less';
-@import 'blocks/btn.less';
-@import 'blocks/text.less';
-@import 'blocks/list.less';
-@import 'blocks/keythems.less';
-// -- depricated -- @import 'blocks/formats.less';
-@import 'blocks/compare.less';
-@import 'blocks/condition.less';
-@import 'blocks/tickets.less';
-@import 'blocks/misc.less';
-@import 'blocks/form.less';
-@import 'blocks/modal.less';
-@import 'blocks/discount.less';
-@import 'blocks/intensive.less';
-@import 'blocks/speakers.less';
-@import 'blocks/schedule.less';
-@import 'blocks/faq.less';
-@import 'blocks/news.less';
-@import 'blocks/feeds.less';
-@import 'blocks/slider.less';
+@import 'src/block.header.less';
+@import 'src/block.footer.less';
 
-@import 'helpers.less';
+
+// utilites.helpers mast be LAST CHILD in inports list
+@import 'src/utilites.helpers.less';
+
