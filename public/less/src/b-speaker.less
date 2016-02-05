@@ -1,0 +1,61 @@
+.b-speaker {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	position: relative;
+	border: 5px solid @grey-light;
+	transition: border .3s;
+
+	&__data {
+		padding: 10%;
+		min-height: 245px;
+	}
+
+	&__name {
+		.fontSizer(24, 30);
+		font-weight: bold;
+		letter-spacing: .010em;
+		padding-right: 10px;
+		margin-bottom: round(15/24em, 3);
+	}
+
+	&__bio {
+		.fontSizer(15, 20);
+	}
+
+	&__photo {
+		position: relative;
+		overflow: hidden;
+		border-bottom: 0;
+
+		&:before {
+			content: "";
+			padding-top: 95%;
+			display: block;
+		}
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	&:hover {
+		border-color: @blue;
+	}
+
+	&-slider {
+		margin-left: -25px;
+		margin-right: -25px;
+		&__item {
+			width: 33.3%;
+			padding: 0 25px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

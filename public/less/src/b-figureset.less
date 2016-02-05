@@ -1,0 +1,33 @@
+.b-figureset {
+	margin-left: -3.333%;
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		width: 30%;
+		margin: 0 -.25em 30px 3.333%;
+	}
+
+	&__caption {
+		color: @blue-light;
+		font-weight: 600;
+		.fontSizer(24, 30);
+
+		a {
+			color: inherit;
+			text-decoration: none;
+
+			&:hover {
+				color: darken(@blue-light, 10%)
+			}
+		}
+	}
+
+	&__img {
+		max-width: 100%;
+		margin-bottom: 0;
+	}
+
+	&__para {
+		margin-bottom: -10px;
+	}
+}

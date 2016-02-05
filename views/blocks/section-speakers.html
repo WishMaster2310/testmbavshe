@@ -1,0 +1,24 @@
+<section class="b-section">
+	<div class="l-width">
+		<div class="b-section__header">
+			<h2 class="l-h1">Спикеры</h2>
+			<a href="/speakers" class="b-section__header-link"><span>Все спикеры</span> →</a>
+		</div>
+
+		<div class="b-speaker-slider b-slider">
+			{%- for speaker in base.speakers %}
+				<div class="b-speaker-slider__item">
+					<a class="b-speaker" href="/speakers#{{ speaker.id }}">
+						<div class="b-speaker__photo">
+							<img src="/images/{{ speaker.photo }}" alt="">
+						</div>
+						<div class="b-speaker__data">
+							<div class="b-speaker__name">{{ speaker.name }}</div>
+							<div class="b-speaker__bio">{{ speaker.bio|safe }}</div>
+						</div>
+					</a>
+				</div>
+			{%- endfor %}
+		</div>
+	</div>
+</section>

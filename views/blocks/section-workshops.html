@@ -1,0 +1,53 @@
+<section class="b-section b-section--workshops">
+	<div class="l-width">
+		<div class="b-section__header">
+			<h2 class="l-h1"  id="j-wokshopStackName"><span>ПЕРВЫЙ СЕМИНАР</span>&nbsp;</h2>
+			<a href="/workshops" class="b-section__header-link"><span>Все семинары</span> →</a>
+		</div>
+		<div class="b-workshop-slider__meta" id="j-wokshopStackDate"><span>29 февраля 2016 / 10:00 </span>&nbsp;
+		</div>
+
+		<div class="b-workshop-slider b-slider">
+			{%- for workshop in base.workshops.slice(0, 1) %}
+				<div class="b-workshop-slider__item" data-stackname="{{ workshop.stack }}" data-stackdate="{{ workshop.date + ' / ' + workshop.time }}">
+					<div class="b-workshop">
+						<div class="b-workshop__inner">
+							<div class="b-workshop__col b-workshop__col--data">
+									<div class="b-workshop__data b-workshop__data--about">
+										<div class="b-workshop__data-slicer">
+											<h3 class="b-workshop__title">{{ workshop.name|safe }}</h3>
+											<div class="b-workshop__text b-text">{{ workshop.shortText|safe }}</div>
+										</div>
+									</div>
+									<div class="b-workshop__data b-workshop__data--speaker">
+										{%- for speaker in base.speakers %}
+											{%- if workshop.speaker == speaker.id %}
+												<div class="b-workshop__data-slicer">
+													<div class="b-workshop__suptitle">Семинар ведёт</div>
+													<div class="b-workshop__title b-workshop__title--lg">{{ speaker.name|safe }}</div>
+													<div class="b-workshop__text b-text">{{ speaker.bio|safe }}</div>
+												</div>
+											{%- endif %}
+										{%- endfor %}
+									</div>
+									<a href="{{ base.reg }}" class="b-workshop__btn">Хочу принять участие</a>&emsp;<a href="#popup-{{ workshop.id }}" class="b-workshop__btn b-workshop__btn--secondary j-popup">Узнать больше</a>
+							</div>
+							<div class="b-workshop__col b-workshop__col--speaker">
+								{%- for speaker in base.speakers %}
+									{%- if workshop.speaker == speaker.id %}
+										<div class="b-workshop-speaker">
+											<div class="b-workshop-speaker__photo">
+												<img src="/images/{{ speaker.photo }}" alt="">
+											</div>
+											<a href="#" class="b-workshop-speaker__btn"><span>{{ speaker.name }}</span></a>
+										</div>
+									{%- endif %}
+								{%- endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			{%- endfor %}
+		</div>
+	</div>
+</section>

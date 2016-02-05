@@ -1,0 +1,30 @@
+.b-list {
+	list-style-type: none;
+
+	&__item {
+		display: table;
+		width: 100%;
+		.remMb(35);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__img {
+		width: 90px;
+		display: table-cell;
+		vertical-align: top;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__text {
+		padding-left: 24px;
+		display: table-cell;
+		vertical-align: top;
+	}
+
+}

@@ -1,10 +1,46 @@
 
 .getMicrosoftFont('normal', 400, 'normal');
+.getMicrosoftFont('bold', 600, 'normal');
+.getMicrosoftFont('semibold', 500, 'normal');
+.getMicrosoftFont('italic', 200, 'italic');
 
+html {
+	font-size: @base-font-size;
+}
 body {
 	font-family: 'wf_segoe-ui', 'Segoe UI', Tahoma, Verdana, Arial, sans-serif;
 	font-size: @base-font-size;
 	line-height: @base-line-height;
 	background-color: #fff;
 	-webkit-font-smoothing: antialiased;
+	color: #231f20;
+	font-style: normal;
+}
+
+
+* {
+	box-sizing: border-box;
+
+	&:before,
+	&:after {
+		box-sizing: border-box;
+	}
+}
+
+
+.l-width {
+	max-width: 970px;
+	margin: 0 auto;
+}
+
+
+.l-main {
+	min-height: 65vh;
+}
+
+.l-h1 {
+	.fontSizer(60px);
+	margin-bottom: round((38/60em), 3);
+	font-weight: 600;
+	text-transform: uppercase;
 }

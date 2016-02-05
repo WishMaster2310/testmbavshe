@@ -1,0 +1,41 @@
+.b-section {
+	padding: 4% 0;
+
+	&__header {
+		position: relative;
+
+		&-link {
+			position: absolute;
+			top: 5px;
+			right: 0;
+			color: #a1a1a4;
+			font-size: 14px;
+			text-decoration: none;
+			transition: color .3s;
+			outline: none !important;
+
+			span {
+				border-bottom: 1px dashed transparent;
+			}
+			
+			&:hover {
+				color: darken(#a1a1a4, 10%);
+
+				span {
+					border-bottom-color: darken(#a1a1a4, 10%);
+				}
+			}
+		}
+
+		&-helper {
+			color: #a3aab5;
+			font-weight: bold;
+			margin-bottom: 40px;
+			.fontSizer(24)
+		}
+	}
+
+	&--workshops {
+		background-color: #f6f6f6;
+	}
+}

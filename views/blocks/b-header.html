@@ -1,0 +1,35 @@
+<header class="b-header">
+  <div class="b-header__row l-width">
+    <div class="b-header__col b-header__col--logo">
+      <a href="/" class="b-header__logo">
+        <img src="/images/b-header__logo.png" alt="Micrisoft Business Administration">
+      </a>
+    </div>
+    <div class="b-header__col b-header__col--links">
+      <div class="b-header__row b-header__row--toplinks">
+        <div class="b-header__col">
+          <div class="b-header__reglink">
+            <a href="{{ base.reg }}">Регистрация</a>
+          </div>
+        </div>
+        <div class="b-header__col b-header__col--tar">
+          <a class="b-header__smallogo" href="https://www.microsoft.com/" target="_blank">
+            <img src="/images/b-header-ms-logo.png" alt="Microsoft">
+          </a>
+          <a class="b-header__smallogo" href="https://www.hse.ru/" target="_blank">
+            <img src="/images/b-header-vshe-logo.png" alt="Microsoft">
+          </a>
+        </div>
+      </div>
+      <div class="b-header__row b-header__row--vab">
+        <ul class="b-menu">
+          {% for item in base.menu %}
+          <li class="b-menu__item">
+            <a href="/{{ item.url }}" class="b-menu__link" id="header-menu-item-{{ item.url }}">{{ item.name }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

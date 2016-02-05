@@ -1,0 +1,83 @@
+.b-header {
+	background-color: #fff;
+	
+	&__row {
+		display: table;
+		width: 100%;
+
+		&--vab {
+			vertical-align: bottom;
+		}
+
+		&--toplinks {
+			padding-top: 15px;
+		}
+	}
+
+	&__col {
+		display: table-cell;
+		vertical-align: middle;
+		
+		&--logo {
+			width: 34%;	
+			vertical-align: top;
+			padding: 30px 0 10px;
+		}
+
+		&--tar {
+			text-align: right;
+		}
+	}
+
+	&__logo {
+		text-decoration: none;
+		border: 0;
+		outline: none;
+
+		img {
+			max-width: 100%;
+			display: inline-block;
+			margin-left: -4%;
+		}
+	}
+
+	&__smallogo {
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 28px;
+	}
+
+	&__reglink {
+		font-size: 15px;
+		line-height: 20px;
+		font-weight: bold;
+		padding-left: 18px;
+		
+		a {
+			color: @blue;
+			text-decoration: none;
+			position: relative;
+
+			&:before {
+				width: 12px;
+				height: 12px;
+				background-color: @blue;
+				content: "+";
+				position: absolute;
+				display: block;
+				line-height: 11px;
+				font-size: 12px;
+				color: #fff;
+				text-align: center;
+				left: -18px;
+				top: 5px;
+
+
+			}
+
+			&:hover {
+				color: lighten(@blue, 10%)
+			}
+		}
+	}
+}

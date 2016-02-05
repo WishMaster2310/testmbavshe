@@ -1,0 +1,84 @@
+.b-slider {
+	font-size: 14px;
+	margin-bottom: round(30/14em, 3);
+	
+	&__arrow {
+		width: 52px;
+		height: 52px;
+		position: absolute;
+		top: 50%;
+		margin-top: -26px;
+		transform: rotate(45deg);
+		border: 5px solid @grey-light;
+		z-index: 1;
+		cursor: pointer;
+
+		&--next {
+			right: -60px;
+			border-bottom: 0;
+			border-left: 0;
+		}
+
+		&--prev {
+			left: -60px;
+			border-top: 0;
+			border-right: 0;
+		}
+
+		&:hover {
+			border-color: @blue;
+		}
+
+		&.slick-disabled {
+			opacity: .2;
+			cursor: default;
+
+			&:hover {
+				border-color: @grey-light;
+			}
+		}
+	}
+
+	&__dots {
+		list-style-type: none;
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 100%;
+		text-align: center;
+		font-size: 14px;
+		margin-left: -14px;
+
+		> li {
+			display: inline-block;
+			vertical-align: top;
+			margin-left: 14px;
+			margin-right: -.25em;
+			margin-top: round(30/14em, 3);
+		}
+
+		button {
+			display: block;
+			text-indent: -999em;
+			overflow: hidden;
+			font-size: 0;
+			line-height: 0;
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			border: 2px solid #a3a3a6;
+			background-color: #fff;
+			cursor: pointer;
+			outline: none;
+
+		}
+
+		.slick-active {
+			button {
+				background-color: @blue;
+				border-color: @blue;
+			}
+		}
+	}
+
+}

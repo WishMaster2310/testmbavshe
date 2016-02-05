@@ -1,0 +1,54 @@
+.b-hero {
+	position: relative;
+	background: url(../images/b-hero__bg.jpg) no-repeat center top;
+	background-size: cover;
+	padding-top: 1px;
+	padding-bottom: 90px;
+
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url(../images/b-hero__bg-pattern.png);
+		content: "";
+	}
+
+	&__block {
+		position: relative;
+		z-index: 1;
+		max-width: 600px;
+		background-color: #221e1f;
+		background-color: fade(#221e1f, 80%);
+		padding: 5%;
+		margin-top: 270px;
+		color: #fff;
+		margin-left: -5%;
+	}
+
+	&__img {
+		max-width: 100%;
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		.fontSizer(18px, 24px)
+	}
+
+	&--alternate {
+		padding-top: 43px;
+		padding-bottom: 50px;
+	}
+
+	&__page-title {
+		.fontSizer(80);
+		letter-spacing: -.005em;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #fff;
+		position: relative;
+		z-index :1;
+	}
+}

@@ -1,0 +1,67 @@
+<div style="display: none">
+	{% for content in base.workshopsContent  %}
+		<div class="b-popup" id="popup-{{ content.rootId }}">
+			{% set semi = {} %}
+
+			{%- for item in base.workshops %}
+				{%- if item.id == content.rootId %}
+					{% set semi = item %}
+				{% endif -%}
+			{% endfor -%}
+
+			<div class="b-popup__content">
+				<div class="b-popup__header">Семинар #{{ loop.index }} <span class="b-popup__meta">{{ semi.date + ' / '+ semi.time }}</span></div>
+				<div class="b-popup__label">Спикер</div>
+				{% for speaker in  base.speakers %}
+					{% if speaker.id == semi.speaker %}
+						<div class="b-author">
+								<div class="b-author__inner">
+									<div class="b-author__img">
+										<img src="/images/{{ speaker.photo }}" alt="{{ speaker.name }}">
+									</div>
+									<div class="b-author__data">
+										<div class="b-author__name">{{ speaker.name  }}</div>
+										<div class="b-author__text">{{ speaker.bio|safe  }}</div>
+									</div>
+								</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+				<div class="b-popup__label">Тема</div>
+				<h2 class="b-popup__subheader">{{ semi.name|safe }}</h2>
+				<div  class="b-popup__text">{{ content.about|safe }}</div>
+			</div>
+
+			<div class="b-popup__content">
+				<div class="b-popup__header">Программа семинара</div>
+
+				<div class="b-schedule">
+				{% for row in content.schedule  %}
+						<div class="b-schedule__row">
+							<div class="b-schedule__col b-schedule__col--time">
+								{{ row.timeStart  + ' / ' + row.timeEnd }}
+							</div>
+							<div class="b-schedule__col">
+								{% if row.type == 'general' %}
+									{{ row.text|safe }}
+									{% else %}
+									<div class="b-schedule__title">{{ row.name }}</div>
+									{% for author in  row.author  %}
+										{% for speaker in  base.speakers  %}
+											{% if author ==  speaker.id %}
+												<div class="b-schedule__author">
+													{{ speaker.name }}, {{ speaker.bio|safe }}
+												</div>
+											{% endif %}
+										{% endfor %}
+									{% endfor %}
+									<div class="b-schedule__text">{{ row.text|safe }}</div>
+								{% endif %}
+							</div>
+						</div>
+				{% endfor %}
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>

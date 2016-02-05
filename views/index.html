@@ -1,12 +1,17 @@
-{% if isExport %}
-	{% extends "./layouts/prod.html" %}
-		{% else %}
-	{% extends "./layouts/main.html" %}
-{% endif %}
+{% if isExport %} {% extends "./layouts/prod.html" %} {% else %} {% extends "./layouts/main.html" %} {% endif %} 
 
-{% block content %}
-<img src="/images/footer-mic.png" alt="">
-{% endblock %}
+{% block content %} 
+{% include 'blocks/b-hero.html' %} 
+{% include 'blocks/section-about.html' %} 
+{% include 'blocks/section-workshops.html' %} 
+{% include 'blocks/section-speakers.html' %} 
+{% include 'blocks/b-map.html' %} 
+{% include 'blocks/section-contacts.html' %} 
+{% include 'blocks/popups-workshops.html' %} 
+{% endblock %} 
 
 {% block pageScripts %}
+<script src="/javascripts/slick.min.js"></script>
+<script src="/javascripts/index.js"></script>
+
 {% endblock %}
